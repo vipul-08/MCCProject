@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".FeedbackActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textAlignment="center"
+        android:text="Course"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/course_heading"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_below="@id/course_heading"
+        android:textAlignment="center"
+        android:id="@+id/teacher_heading"
+        android:text="teacher"/>
+
+    <EditText
+        android:layout_marginTop="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:layout_below="@id/teacher_heading"
+        android:id="@+id/giveReview"
+        android:background="@drawable/customborder"
+        android:singleLine="false"
+        android:hint="Enter your review"
+        android:lines="5" />
+    <RatingBar
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:max="5"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:rating="0"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/giveReview"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingBar"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+        android:hint="Enter your PRN"
+        android:background="@drawable/customborder"
+        android:id="@+id/enterPrn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/customborder"
+        android:layout_below="@id/enterPrn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/submitBtn"
+        android:text="Submit"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorName="BallPulseSyncIndicator"
+        app:indicatorColor="@color/colorAccent"
+        android:id="@+id/loader"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/submitBtn"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
